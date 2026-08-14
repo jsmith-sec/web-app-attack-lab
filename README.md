@@ -1,4 +1,27 @@
-# Web Application Attack Lab
+<div align="center">
+
+# 🕸️ Web Application Attack Lab
+### Attack, Log, and Detect Against a Vulnerable Web App
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=800&color=2F81F7&center=true&vCenter=true&width=690&lines=Web+Application+Attack+%26+Detection;SQLi+%7C+Command+Injection+%7C+XSS+%7C+Brute+Force;Apache+Logs+to+Kibana+Detections" alt="typing summary" />
+
+<p>
+  <img src="https://img.shields.io/badge/Type-Web%20App%20Attack%20%2B%20Detection-0A2A66?style=for-the-badge" alt="type" />
+  <img src="https://img.shields.io/badge/Target-DVWA-2F81F7?style=for-the-badge" alt="target" />
+  <a href="web_app_attack_lab_report.pdf"><img src="https://img.shields.io/badge/Full%20Report-PDF-0A2A66?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="full report" /></a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" alt="kali" />
+  <img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="apache" />
+  <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white" alt="elasticsearch" />
+  <img src="https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white" alt="kibana" />
+  <img src="https://img.shields.io/badge/Nikto-2F81F7?style=flat-square" alt="nikto" />
+  <img src="https://img.shields.io/badge/Hydra-2F81F7?style=flat-square" alt="hydra" />
+  <img src="https://img.shields.io/badge/SQLmap-2F81F7?style=flat-square" alt="sqlmap" />
+</p>
+
+</div>
 
 A home SOC lab simulating real-world web application attacks against a deliberately vulnerable target, with full log ingestion, detection rules, and a Kibana dashboard built on top of the attack data.
 
@@ -44,21 +67,27 @@ This lab sets up DVWA (Damn Vulnerable Web Application) as a target and runs six
 ## Screenshots
 
 ### Kibana Dashboard
+
 ![Web Attack Dashboard](web-attack-dashboard.png)
 
 ### Nikto Web Scanner
+
 ![Nikto Scan](nikto_scan.png)
 
 ### Hydra Brute Force
+
 ![Hydra Brute Force](hydra_brute_force.png)
 
 ### SQLmap Automated Injection
+
 ![SQLmap Output](sqlmap_output.png)
 
 ### Kibana Apache Logs
+
 ![Kibana Apache Logs](kibana_apache_logs.png)
 
 ### Detection Rule - SQL Injection
+
 ![Detection Rule](detection_rule_sql_injection.png)
 
 ---
