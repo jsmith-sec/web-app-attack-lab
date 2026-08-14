@@ -62,33 +62,21 @@ This lab sets up DVWA (Damn Vulnerable Web Application) as a target and runs six
 | Brute Force | Hydra + rockyou.txt | Credentials found in 8 attempts |
 | Automated SQLi | SQLmap | 3 injection types, 3 databases enumerated |
 
----
+<img src="nikto_scan.png" width="720" alt="Nikto Scan">
 
-## Screenshots
+*Nikto web scanner — 16 findings across 8,102 requests, including an exposed `.git` directory.*
 
-### Kibana Dashboard
+<img src="hydra_brute_force.png" width="720" alt="Hydra Brute Force">
 
-![Web Attack Dashboard](web-attack-dashboard.png)
+*Hydra brute-forcing the DVWA login and recovering credentials from rockyou.txt.*
 
-### Nikto Web Scanner
+<img src="sqlmap_output.png" width="720" alt="SQLmap Output">
 
-![Nikto Scan](nikto_scan.png)
+*SQLmap confirming three injection techniques and enumerating three databases.*
 
-### Hydra Brute Force
+<img src="kibana_apache_logs.png" width="720" alt="Kibana Apache Logs">
 
-![Hydra Brute Force](hydra_brute_force.png)
-
-### SQLmap Automated Injection
-
-![SQLmap Output](sqlmap_output.png)
-
-### Kibana Apache Logs
-
-![Kibana Apache Logs](kibana_apache_logs.png)
-
-### Detection Rule - SQL Injection
-
-![Detection Rule](detection_rule_sql_injection.png)
+*Every request captured — Apache logs shipped to Elasticsearch and viewed in Kibana Discover.*
 
 ---
 
@@ -105,6 +93,10 @@ Custom query rule — triggers on URL parameters containing SQL keywords includi
 **Brute Force Login**  
 Threshold rule — triggers when a single source IP sends more than 10 POST requests to the login page within 1 minute. Hydra generated 239 POST requests in under 15 seconds.
 
+<img src="detection_rule_sql_injection.png" width="720" alt="SQL Injection Detection Rule">
+
+*The SQL injection detection rule in Kibana Security, matching on SQL keywords in request parameters.*
+
 ---
 
 ## Kibana Dashboard
@@ -117,6 +109,10 @@ The Web App Attack Dashboard uses the `filebeat-*` index filtered to `event.modu
 - **HTTP Methods** — pie chart showing GET at 98.83% and POST at 0.97%
 - **Top Requested URLs** — login page, DVWA root, setup and index pages
 - **Top User Agents** — sqlmap/1.7.8, Nikto/2.5.0, CVE-2014-6271 Shellshock probe string
+
+<img src="web-attack-dashboard.png" width="720" alt="Web Attack Dashboard">
+
+*The Web App Attack dashboard — traffic over time, top attacking IPs, response codes, methods, URLs, and user agents.*
 
 ---
 
